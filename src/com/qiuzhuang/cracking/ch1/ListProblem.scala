@@ -25,11 +25,7 @@ object ListProblem {
    */
   def truncate(s: String): String = {
     val sb = new StringBuilder
-    for (ch <- s) {
-      if (!sb.contains(ch)) {
-         sb.append(ch)
-      }
-    }
+    for (ch <- s if sb.contains(ch)) sb.append(ch)
     sb.toString
   }
 
