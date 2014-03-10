@@ -12,3 +12,31 @@ abstract class Expression {
 {case p1 => E1; case p2 => E2;... case pn => En} is equivalent to
 
 (x match {case p1 => E1; case p2 => E2;... case pn => En})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
