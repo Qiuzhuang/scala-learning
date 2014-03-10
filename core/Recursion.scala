@@ -26,3 +26,12 @@ def mergeSort[A](less: (A, A) => Boolean)(xs: List[A]): List[A] = {
   else merge(mergeSort(less)(xs.take(m)), mergeSort(less)(xs.drop(m)))
 }
 
+def flatMap[A, B](f: A => List[B]): List[B] = this match {
+  case Nil => Nil
+  case x :: xs => f(x) ::: (xs flatMap f)
+}
+
+// unevaluated until needed.
+Stream.cons(x, xs) VS  x :: xs
+Stream.append(xs1, xs2) VS xs1 ::: xs2
+
